@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Map your uncertainties in 10 minutes</title>
+<title>Map your uncertainties in 15 minutes</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&display=swap">
@@ -95,10 +95,10 @@ h1 { font-size: clamp(2rem, 6vw, 2.9rem); line-height: 1.08; margin: 0 0 0.75rem
 .clock-bar a:focus-visible { outline: 3px solid var(--fill-ink); outline-offset: -3px; }
 .clock-bar a strong { font-size: 0.95rem; }
 .clock-bar a span { font-size: 0.8rem; opacity: 0.85; }
-.s1 { flex: 2; background: var(--seg-1); }
-.s2 { flex: 2; background: var(--seg-2); }
-.s3 { flex: 3; background: var(--seg-3); }
-.s4 { flex: 3; background: var(--seg-4); }
+.s1 { flex: 3; background: var(--seg-1); }
+.s2 { flex: 4; background: var(--seg-2); }
+.s3 { flex: 4; background: var(--seg-3); }
+.s4 { flex: 4; background: var(--seg-4); }
 .clock-scale { display: flex; justify-content: space-between; font-size: 0.8rem; color: var(--muted); margin-top: 0.35rem; }
 
 .before {
@@ -144,17 +144,17 @@ button.copy.done { background: var(--ok); color: var(--surface); }
 </head>
 <body>
 <main>
-  <h1>Map your uncertainties in 10 minutes</h1>
+  <h1>Map your uncertainties in 15 minutes</h1>
   <p class="lede">Four prompts take you from messy notes to a one-page map built around the questions you want other fellows’ help with. Copy each prompt into Claude, fill in the highlighted parts, and keep going in the same chat.</p>
 
   <nav class="clock" aria-label="Steps and timing">
     <div class="clock-bar">
-      <a class="s1" href="#step1"><strong>1. Read</strong><span>2 min</span></a>
-      <a class="s2" href="#step2"><strong>2. Frame</strong><span>2 min</span></a>
-      <a class="s3" href="#step3"><strong>3. Build</strong><span>3 min</span></a>
-      <a class="s4" href="#step4"><strong>4. Fix</strong><span>3 min</span></a>
+      <a class="s1" href="#step1"><strong>1. Read</strong><span>3 min</span></a>
+      <a class="s2" href="#step2"><strong>2. Frame</strong><span>4 min</span></a>
+      <a class="s3" href="#step3"><strong>3. Build</strong><span>4 min</span></a>
+      <a class="s4" href="#step4"><strong>4. Fix</strong><span>4 min</span></a>
     </div>
-    <div class="clock-scale" aria-hidden="true"><span>0</span><span>10 min</span></div>
+    <div class="clock-scale" aria-hidden="true"><span>0</span><span>15 min</span></div>
   </nav>
 
   <section class="before" aria-labelledby="before-h">
@@ -163,7 +163,7 @@ button.copy.done { background: var(--ok); color: var(--surface); }
   </section>
 
   <section class="step" id="step1" aria-labelledby="h1s">
-    <div class="step-head"><h2 id="h1s">1. Let Claude read and reflect</h2><span class="mins">2 min</span></div>
+    <div class="step-head"><h2 id="h1s">1. Let Claude read and reflect</h2><span class="mins">3 min</span></div>
     <p class="why">Claude restates your project before organizing anything. Its wrong guesses preview what an outsider would get wrong.</p>
     <div class="prompt">
       <div class="prompt-bar"><span>Prompt 1</span><button class="copy" type="button" data-target="p1">Copy</button></div>
@@ -179,7 +179,7 @@ My notes:
   </section>
 
   <section class="step" id="step2" aria-labelledby="h2s">
-    <div class="step-head"><h2 id="h2s">2. Correct it and draft the questions</h2><span class="mins">2 min</span></div>
+    <div class="step-head"><h2 id="h2s">2. Correct it and draft the questions</h2><span class="mins">4 min</span></div>
     <p class="why">This sets the frame (goal, tests, inputs) and turns each uncertainty into a card that leads with its open question. Claude also suggests which questions to put to the room. No visual yet.</p>
     <div class="prompt">
       <div class="prompt-bar"><span>Prompt 2</span><button class="copy" type="button" data-target="p2">Copy</button></div>
@@ -204,7 +204,7 @@ Finally, suggest the two or three questions where input from that audience would
   </section>
 
   <section class="step" id="step3" aria-labelledby="h3s">
-    <div class="step-head"><h2 id="h3s">3. Build the one-pager</h2><span class="mins">3 min</span></div>
+    <div class="step-head"><h2 id="h3s">3. Build the one-pager</h2><span class="mins">4 min</span></div>
     <p class="why">Turns the cards into a page you can show, edit and share, with the open questions as the first thing anyone reads.</p>
     <div class="prompt">
       <div class="prompt-bar"><span>Prompt 3</span><button class="copy" type="button" data-target="p3">Copy</button></div>
@@ -225,7 +225,7 @@ Keep it to one page, and leave out anything confidential I haven’t cleared to 
   </section>
 
   <section class="step" id="step4" aria-labelledby="h4s">
-    <div class="step-head"><h2 id="h4s">4. Fix what seeing it reveals</h2><span class="mins">3 min</span></div>
+    <div class="step-head"><h2 id="h4s">4. Fix what seeing it reveals</h2><span class="mins">4 min</span></div>
     <p class="why">A draft often surfaces something your notes never mentioned, such as a north-star question, a missing dependency, or a card that’s too detailed.</p>
     <div class="prompt">
       <div class="prompt-bar"><span>Prompt 4</span><button class="copy" type="button" data-target="p4">Copy</button></div>

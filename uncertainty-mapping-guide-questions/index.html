@@ -137,6 +137,8 @@ button.copy.done { background: var(--ok); color: var(--surface); }
 .after { border-top: 1px solid var(--line); padding-top: 1.75rem; }
 .after h2 { font-size: 1.35rem; margin: 0 0 0.4rem; }
 .after p { margin: 0; color: var(--muted); }
+.after ul { margin: 0; padding-left: 1.2rem; }
+.after li + li { margin-top: 0.45rem; }
 @media (prefers-reduced-motion: no-preference) {
   button.copy { transition: background-color 150ms ease; }
 }
@@ -239,7 +241,13 @@ Update the visual. Then check every open question: could someone outside my fiel
 
   <section class="after" aria-labelledby="after-h">
     <h2 id="after-h">When you present</h2>
-    <p>Walk the map left to right in under a minute: the goal, what must be true for it to count, then what you don’t know yet. Then point to “Questions for the room” and stay there. Read each question aloud, say what kind of input would help, and let people answer before you move to the next one. The map is the setup; the questions are the conversation.</p>
+    <ul>
+      <li>Walk the map left to right in under a minute: the goal, what must be true for it to count, then what you don’t know yet.</li>
+      <li>Point to “Questions for the room” and stay there.</li>
+      <li>Read each question aloud and say what kind of input would help.</li>
+      <li>Let people answer before you move to the next one.</li>
+      <li>The map is the setup; the questions are the conversation.</li>
+    </ul>
   </section>
 
 </main>
